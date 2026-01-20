@@ -57,7 +57,7 @@ header {
     position: relative;
     z-index: 2;
     height: 100%;
-    padding-top: 80px; /* altura del nav */
+    padding-top: 80px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -246,7 +246,7 @@ button:hover {
 
 .contacto {
     padding: 6rem 2rem;
-    background: #f9fafb; /* mismo estilo limpio de la web */
+    background: #f9fafb; 
     text-align: center;
 }
 
@@ -255,7 +255,7 @@ button:hover {
     margin-bottom: 2rem;
 }
 
-/* Card del formulario */
+
 .contacto form {
     max-width: 500px;
     margin: auto;
@@ -266,14 +266,14 @@ button:hover {
     text-align: left;
 }
 
-/* Labels */
+
 .contacto label {
     display: block;
     margin-top: 1.2rem;
     font-weight: 600;
 }
 
-/* Inputs y textarea */
+
 .contacto input,
 .contacto textarea {
     width: 100%;
@@ -286,13 +286,13 @@ button:hover {
     transition: border 0.3s, box-shadow 0.3s;
 }
 
-/* Altura del textarea */
+
 .contacto textarea {
     min-height: 120px;
     resize: vertical;
 }
 
-/* Focus bonito */
+
 .contacto input:focus,
 .contacto textarea:focus {
     outline: none;
@@ -300,7 +300,7 @@ button:hover {
     box-shadow: 0 0 0 3px rgba(79,70,229,0.15);
 }
 
-/* Botón */
+
 .contacto button {
     margin-top: 2rem;
     width: 100%;
