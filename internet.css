@@ -319,3 +319,86 @@ button:hover {
     background: #3730a3;
     transform: translateY(-2px);
 }
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    header {
+        height: 100vh;
+    }
+
+    .contenido-header {
+        padding: 1rem;
+    }
+
+    .contenido-header h1 {
+        font-size: 2rem;
+    }
+
+    .contenido-header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav {
+        padding: 1rem 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .grid-galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .grid-galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-section {
+        height: 70vh;
+    }
+
+    .video-text h2 {
+        font-size: 1.8rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    form,
+    .contacto form {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    input,
+    textarea,
+    button {
+        font-size: 1rem;
+    }
+}
