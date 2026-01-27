@@ -109,7 +109,7 @@ main {
 }
 
 .recuerdos {
-    padding: 0;
+    padding: 2rem;
 }
 
 .cards {
@@ -347,6 +347,8 @@ button:hover {
 @media (max-width: 600px) {
     .nav {
         padding: 1rem 1.5rem;
+        position: fixed;
+        z-index: 998;
     }
 
     .logo {
@@ -413,12 +415,14 @@ button:hover {
     color: #111;
 }
 
-/* MÓVIL */
+/* ===== MENÚ MÓVIL ===== */
+
 @media (max-width: 600px) {
 
     .menu-icon {
         display: block;
-        margin-left: auto;
+        position: relative;
+        z-index: 999;
     }
 
     .menu {
@@ -432,7 +436,7 @@ button:hover {
         padding: 1.2rem;
         border-radius: 14px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        z-index: 200;
+        z-index: 998;
     }
 
     .menu a {
@@ -445,5 +449,22 @@ button:hover {
 
     #menu-toggle:checked + .menu-icon + .menu {
         display: flex;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    footer p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    footer .icons {
+        display: flex;
+        gap: 12px;
     }
 }
