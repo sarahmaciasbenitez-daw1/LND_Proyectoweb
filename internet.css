@@ -468,3 +468,123 @@ button:hover {
         gap: 12px;
     }
 }
+
+/* ===== Animación retro walker ===== */
+
+.retro-walker {
+    position: absolute;
+    bottom: 18%;
+    left: -300px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    animation: retro-walk 26s linear infinite;
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Personaje minimalista pixel */
+.walker {
+    width: 28px;
+    height: 48px;
+    background: white;
+    position: relative;
+    box-shadow:
+        0 0 0 3px black,
+        inset 0 -6px 0 #aaa;
+    animation: walk-bob 0.6s infinite alternate;
+}
+
+/* Piernas */
+.walker::before,
+.walker::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 6px;
+    height: 12px;
+    background: black;
+}
+
+.walker::before {
+    left: 6px;
+    animation: leg-left 0.4s infinite alternate;
+}
+
+.walker::after {
+    right: 6px;
+    animation: leg-right 0.4s infinite alternate;
+}
+
+/* Texto cometa */
+.walker-text {
+    font-family: monospace;
+    font-size: 1.1rem;
+    color: white;
+    white-space: nowrap;
+    opacity: 0.85;
+    position: relative;
+}
+
+/* Estela */
+.walker-text::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    background: rgba(255,255,255,0.6);
+    transform: translateY(-50%);
+}
+
+/* ===== Animaciones ===== */
+
+@keyframes retro-walk {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(100vw + 600px));
+    }
+}
+
+@keyframes walk-bob {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(4px);
+    }
+}
+
+@keyframes leg-left {
+    from {
+        transform: rotate(10deg);
+    }
+    to {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes leg-right {
+    from {
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .retro-walker {
+        bottom: 28%;
+        transform: scale(0.7);
+        animation-duration: 18s;
+    }
+
+    .walker-text {
+        font-size: 0.9rem;
+    }
+}
+
