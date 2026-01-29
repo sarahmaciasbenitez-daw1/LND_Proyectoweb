@@ -481,39 +481,18 @@ button:hover {
     animation: retro-walk 26s linear infinite;
     z-index: 3;
     pointer-events: none;
+    line-height: 0;
+    transform: translateZ(0);
+    will-change: transform;
 }
 
-/* Personaje minimalista pixel */
+/* Personaje pixel */
 .walker {
-    width: 28px;
-    height: 48px;
-    background: white;
-    position: relative;
-    box-shadow:
-        0 0 0 3px black,
-        inset 0 -6px 0 #aaa;
+    display: block;
+    width: 48px;
+    height: auto;
+    image-rendering: pixelated;
     animation: walk-bob 0.6s infinite alternate;
-}
-
-/* Piernas */
-.walker::before,
-.walker::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    width: 6px;
-    height: 12px;
-    background: black;
-}
-
-.walker::before {
-    left: 6px;
-    animation: leg-left 0.4s infinite alternate;
-}
-
-.walker::after {
-    right: 6px;
-    animation: leg-right 0.4s infinite alternate;
 }
 
 /* Texto cometa */
