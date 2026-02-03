@@ -14,6 +14,7 @@ header {
     position: relative;
     width: 100%;
     height: 100vh;
+    overflow: hidden; 
 }
 
 .header {
@@ -29,15 +30,16 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -2;
+    z-index: 0;
+    opacity: 0.9;
 }
 
-.header::before {
+header::before {
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.2);
-    z-index: -1;
+    z-index: 1;
 }
 
 .nav {
@@ -97,10 +99,53 @@ main {
     background-position: center;
     background-attachment: fixed;
     display: flex;
+    flex-direction: column; 
     align-items: center;
-    justify-content: center;
+    justify-content: space-around; 
+    overflow: hidden; 
 }
 
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    width: max-content; 
+    animation: scroll 10s linear infinite;
+}
+
+.carousel-track.reverse {
+    animation: scroll-reverse 10s linear infinite;
+}
+
+.carousel-track img {
+    width: 200px; 
+    height: 130px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #4f46e5;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Animaciones */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+
+@keyframes scroll-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+.hero-content {
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
 .hero-content {
     background: rgba(255,255,255,0.85);
     padding: 2rem;
@@ -165,9 +210,15 @@ main {
 .grid-galeria img {
     width: 100%;
     transition: transform 0.3s;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 .grid-galeria img:hover {
+    transform: scale(1.05);
+}
+
+.grid-galeria img:focus {
     transform: scale(1.05);
 }
 
@@ -474,7 +525,6 @@ button:hover {
 .retro-walker {
     position: absolute;
     bottom: 18%;
-    left: -300px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -484,16 +534,24 @@ button:hover {
     line-height: 0;
     transform: translateZ(0);
     will-change: transform;
+
 }
 
 /* Personaje pixel */
 .walker {
-    display: block;
     width: 48px;
     height: auto;
     image-rendering: pixelated;
-    animation: walk-bob 0.6s infinite alternate;
+    image-rendering: crisp-edges;
+    opacity: 1;
+    filter: contrast(1.3) brightness(0.95);
+    animation: walk-bob 0.6s infinite alternate;;
 }
+
+.walker-scale {
+    transform: scale(1.45);
+    transform-origin: bottom left;
+} 
 
 /* Texto cometa */
 .walker-text {
@@ -507,7 +565,6 @@ button:hover {
 
 /* Estela */
 .walker-text::before {
-    content: "";
     position: absolute;
     left: -40px;
     top: 50%;
@@ -567,3 +624,48 @@ button:hover {
     }
 }
 
+/* ===== Botón nostálgico ===== */
+
+.nostalgia-audio {
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+#nostalgia-btn {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 1rem 2.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 10px 25px rgba(79,70,229,0.3);
+    display: inline-flex;
+    align-items: center;    
+    justify-content: center;  
+    gap: 0.6rem;
+}
+
+#nostalgia-btn:hover {
+    background: #3730a3;
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(79,70,229,0.35);
+}
+
+#nostalgia-btn:active {
+    transform: translateY(0);
+}
+
+.nostalgia-text {
+    margin-top: 1rem;
+    font-family: monospace;
+    font-size: 0.95rem;
+    opacity: 0.7;
+    display: block;
+    text-align: center;
+}

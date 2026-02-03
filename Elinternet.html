@@ -36,13 +36,15 @@
     </nav>
 
     <video autoplay muted loop playsinline class="video-header">
-        <source src="videos/videofondo.mp4" type="video/mp4">
+        <source src="videosyAudios/videofondo.mp4" type="video/mp4">
         Tu navegador no soporta este video.
     </video>
         
     <div class="retro-walker">
-        <img src="imgs/sillyahhhamster.png" class="walker" alt="">
-        <span class="walker-text">¿Extrañas Windows 7?</span>
+        <div class="walker-scale">
+            <img src="imgs/sillyahhhamster.png" class="walker" alt="">
+        </div>
+        <span class="walker-text">¿Extrañas Windows XP?</span>
     </div>
 
 </header>
@@ -50,10 +52,53 @@
 <main>
 
     <section id="inicio" class="hero">
-      
+        <div class="carousel-container top">
+            <div class="carousel-track">
+                <img src="imgs/Youtube.jpg" alt="">
+                <img src="imgs/Facebook2007.jpg" alt="">
+                <img src="imgs/Google.jpg" alt="">
+                <img src="imgs/interfazwindosxp.jpg" alt="">
+                <img src="imgs/Youtube.jpg" alt="">
+                <img src="imgs/Facebook2007.jpg" alt="">
+                <img src="imgs/Google.jpg" alt="">
+                <img src="imgs/interfazwindosxp.jpg" alt="">
+
+                <img src="imgs/Youtube.jpg" alt="">
+                <img src="imgs/Facebook2007.jpg" alt="">
+                <img src="imgs/Google.jpg" alt="">
+                <img src="imgs/interfazwindosxp.jpg" alt="">
+                <img src="imgs/Youtube.jpg" alt="">
+                <img src="imgs/Facebook2007.jpg" alt="">
+                <img src="imgs/Google.jpg" alt="">
+                <img src="imgs/interfazwindosxp.jpg" alt="">
+            </div>
+        </div>
+
         <div class="hero-content">
             <h2>Los buenos años del Internet</h2>
             <p>Un viaje visual por los primeros años del internet social</p>
+        </div>
+
+        <div class="carousel-container bottom">
+            <div class="carousel-track reverse">
+                <img src="imgs/primermeme.jpg" alt="">
+                <img src="imgs/evolucionRS.jpg" alt="">
+                <img src="imgs/imacg4.jpg" alt="">
+                <img src="imgs/iconpackretro.jpg" alt="">
+                <img src="imgs/primermeme.jpg" alt="">
+                <img src="imgs/evolucionRS.jpg" alt="">
+                <img src="imgs/imacg4.jpg" alt="">
+                <img src="imgs/iconpackretro.jpg" alt="">
+
+                <img src="imgs/primermeme.jpg" alt="">
+                <img src="imgs/evolucionRS.jpg" alt="">
+                <img src="imgs/imacg4.jpg" alt="">
+                <img src="imgs/iconpackretro.jpg" alt="">
+                <img src="imgs/primermeme.jpg" alt="">
+                <img src="imgs/evolucionRS.jpg" alt="">
+                <img src="imgs/imacg4.jpg" alt="">
+                <img src="imgs/iconpackretro.jpg" alt="">
+            </div>
         </div>
     </section>
 
@@ -82,12 +127,21 @@
 
     <section class="video-section">
         <video autoplay muted loop>
-            <source src="video/fondo.mp4" type="video/mp4">
+            <source src="videosyAudios/videofondo.mp4" type="video/mp4">
         </video>
         <div class="video-text">
             <h2>El internet se volvió visual</h2>
             <p>El vídeo cambió la forma de comunicarnos</p>
         </div>
+    </section>
+
+   <section class="nostalgia-audio">
+        <button id="nostalgia-btn">
+            <i class="fas fa-music"></i> Reproducir nostalgia
+        </button>
+        <audio id="nostalgia-audio" loop>
+            <source src="videosyAudios/New Look WiiU.mp3" type="audio/mpeg">
+        </audio>
     </section>
 
     <!-- GALERÍA -->
@@ -96,7 +150,7 @@
 
         <div class="grid-galeria">
             <figure>
-                <img src="imgs/evolucionRS.jpg" alt="Evolución de las Redes Sociales">
+                <img src="imgs/evolucionRS.jpg" alt="RS antiguas">
                 <figcaption>Evolución</figcaption>
             </figure>
 
@@ -162,6 +216,23 @@
         <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
     </div>
 </footer>
+
+<script>
+    const btn = document.getElementById("nostalgia-btn");
+    const audio = document.getElementById("nostalgia-audio");
+
+    audio.volume = 0.25;
+
+    btn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            btn.innerHTML = '<i class="fas fa-pause"></i> Pausar nostalgia';
+        } else {
+            audio.pause();
+            btn.innerHTML = '<i class="fas fa-music"></i> Reproducir nostalgia';
+        }
+    });
+</script>
 
 </body>
 </html>
