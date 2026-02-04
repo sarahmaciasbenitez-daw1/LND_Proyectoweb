@@ -69,7 +69,7 @@ header::before {
 }
 
 main {
-    margin-top: 100vh;
+    margin-top: 10vh;
 }
 
 .logo span {
@@ -226,6 +226,12 @@ main {
     padding: 6rem 2rem;
 }
 
+.datos li{
+    width: fit-content;
+    margin: 0 auto;
+    color: #4f46e5;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -304,8 +310,12 @@ button:hover {
 .contacto h2 {
     font-size: 2.2rem;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
+.datos h2{
+    text-align: center;
+}
 
 .contacto form {
     max-width: 500px;
@@ -317,13 +327,11 @@ button:hover {
     text-align: left;
 }
 
-
 .contacto label {
     display: block;
     margin-top: 1.2rem;
     font-weight: 600;
 }
-
 
 .contacto input,
 .contacto textarea {
@@ -350,7 +358,6 @@ button:hover {
     border-color: #4f46e5;
     box-shadow: 0 0 0 3px rgba(79,70,229,0.15);
 }
-
 
 .contacto button {
     margin-top: 2rem;
@@ -563,7 +570,6 @@ button:hover {
     position: relative;
 }
 
-/* Estela */
 .walker-text::before {
     position: absolute;
     left: -40px;
@@ -624,48 +630,3 @@ button:hover {
     }
 }
 
-/* ===== Botón nostálgico ===== */
-
-.nostalgia-audio {
-    padding: 6rem 2rem;
-    text-align: center;
-}
-
-#nostalgia-btn {
-    background: #4f46e5;
-    color: white;
-    border: none;
-    padding: 1rem 2.2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 14px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 10px 25px rgba(79,70,229,0.3);
-    display: inline-flex;
-    align-items: center;    
-    justify-content: center;  
-    gap: 0.6rem;
-}
-
-#nostalgia-btn:hover {
-    background: #3730a3;
-    transform: translateY(-3px);
-    box-shadow: 0 14px 30px rgba(79,70,229,0.35);
-}
-
-#nostalgia-btn:active {
-    transform: translateY(0);
-}
-
-.nostalgia-text {
-    margin-top: 1rem;
-    font-family: monospace;
-    font-size: 0.95rem;
-    opacity: 0.7;
-    display: block;
-    text-align: center;
-}
