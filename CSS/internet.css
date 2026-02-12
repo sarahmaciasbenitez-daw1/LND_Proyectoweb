@@ -215,6 +215,7 @@ main {
 
 .galeria {
     padding: 6rem 2rem;
+    color:#ccc;
 }
 
 .grid-galeria {
@@ -350,7 +351,6 @@ button:hover {
     max-width: 500px;
     margin: 3rem auto;
     color: #ececec;
-    text-align: left;
 }
 
 .datos-preguntas .pregunta {
@@ -613,6 +613,15 @@ button:hover {
         padding: 1.5rem;
         margin: 1rem;
     }
+
+    @media (max-width: 600px) {
+    .datos-preguntas {
+        width: 90%;          
+        margin: 2rem auto; 
+        padding: 1.5rem;    
+        box-sizing: border-box; 
+    }
+}
 
     input,
     textarea,
