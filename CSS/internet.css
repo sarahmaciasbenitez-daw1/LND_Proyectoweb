@@ -338,6 +338,14 @@ button:hover {
     color: #ececec;
 }
 
+.datos label{
+    color: #b3b3b3;
+}
+
+.datos input{
+    color: #b3b3b3;
+}
+
 .datos-preguntas {
     max-width: 500px;
     margin: 3rem auto;
