@@ -1,8 +1,8 @@
 const feeds = [
     "https://feeds.bbci.co.uk/news/technology/rss.xml",
     "https://www.theverge.com/rss/index.xml",
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCBJycsmduvYEL83R_U4JriQ", // MKBHD
-    "https://www.youtube.com/feeds/videos.xml?channel_id=UCY1kMZp36IQSyNx_9h4mpCg"  // Mark Rober
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCBJycsmduvYEL83R_U4JriQ",
+    "https://www.youtube.com/feeds/videos.xml?channel_id=UCY1kMZp36IQSyNx_9h4mpCg"  
 ];
 
 const container = document.getElementById("rss-feed");

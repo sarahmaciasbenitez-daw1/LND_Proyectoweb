@@ -46,6 +46,7 @@ header::before {
 .nav {
     position: fixed;
     display: flex;
+    gap: 2rem;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 3rem;
@@ -99,14 +100,16 @@ main {
 }
 
 .hero {
-    height: 100vh;
+    min-height: 100vh;
+    padding: 4rem 0;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     display: flex;
     flex-direction: column; 
     align-items: center;
-    justify-content: space-around; 
+    justify-content: center;
+    gap: 3rem;  
     overflow: hidden; 
 }
 
@@ -120,11 +123,11 @@ main {
     display: flex;
     gap: 20px;
     width: max-content; 
-    animation: scroll 10s linear infinite;
+    animation: scroll 18s linear infinite;
 }
 
 .carousel-track.reverse {
-    animation: scroll-reverse 10s linear infinite;
+    animation: scroll-reverse 18s linear infinite;
 }
 
 .carousel-track img {
@@ -523,7 +526,7 @@ button:hover {
     color: #4f46e5;
 }
 
-/* Responsive media */
+/* Responsive media física */
 @media (max-width: 768px) {
     .media-content {
         flex-direction: column;
@@ -713,7 +716,6 @@ button:hover {
 
 }
 
-/* Personaje pixel */
 .walker {
     width: 48px;
     height: auto;
