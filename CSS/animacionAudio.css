@@ -7,8 +7,8 @@
     background: #4f46e5;
     color: white;
     border: none;
-    padding: 1rem 2.2rem;
-    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
     font-weight: 600;
     border-radius: 14px;
     cursor: pointer;
@@ -22,13 +22,11 @@
 
 #nostalgia-btn:hover {
     background: #3730a3;
-    transform: translateY(-3px);
+    transform: translateY(-4px) scale(1.0);
     box-shadow: 0 14px 30px rgba(79,70,229,0.35);
 }
 
-#nostalgia-btn:hover {
-    transform: scale(1.1);
-}
+
 
 .nostalgia-text {
     margin-top: 1rem;
