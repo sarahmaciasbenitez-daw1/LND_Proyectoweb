@@ -1,7 +1,7 @@
 const btn = document.getElementById("nostalgia-btn");
 const audio = document.getElementById("nostalgia-audio");
 
-audio.volume = 0.25;
+audio.volume = 0.55;
 
 btn.addEventListener("click", () => {
     if (audio.paused) {

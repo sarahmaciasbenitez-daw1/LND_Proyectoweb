@@ -1,5 +1,5 @@
 .nostalgia-audio {
-    padding: 6rem 2rem;
+    padding: 3rem 2rem;
     text-align: center;
 }
 
@@ -14,7 +14,7 @@
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 1rem;
     transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
     box-shadow: 0 10px 25px rgba(79,70,229,0.3);  
     justify-content: center;  
@@ -27,7 +27,7 @@
 }
 
 #nostalgia-btn:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .nostalgia-text {

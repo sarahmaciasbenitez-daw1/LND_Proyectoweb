@@ -14,7 +14,7 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     overflow: hidden; 
 }
 
@@ -60,18 +60,22 @@ header::before {
 .contenido-header {
     position: relative;
     z-index: 2;
-    height: 100%;
+    height: 60vh; 
     padding-top: 80px; 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
     text-align: center;
-    color:#ccc
+    color:#ccc;
+}
+
+.contenido-header h1{
+    text-shadow: 2px 2px 5px black;
 }
 
 main {
-    margin-top: 10vh;
+    margin-top: 0;
 }
 
 .logo{
@@ -100,23 +104,22 @@ main {
 }
 
 .hero {
-    min-height: 100vh;
-    padding: 4rem 0;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    min-height: auto;
+    padding: 10px 0 2rem 0; 
+    background-color: #272727;
     display: flex;
     flex-direction: column; 
     align-items: center;
-    justify-content: center;
-    gap: 3rem;  
-    overflow: hidden; 
+    justify-content: flex-start;
+    gap: 1rem; 
+    overflow: hidden;
+    border-top: 2px solid #4f46e5;
 }
 
 .carousel-container {
     width: 100%;
     overflow: hidden;
-    padding: 15px 0;
+    padding: 0;
 }
 
 .carousel-track {
@@ -217,29 +220,50 @@ main {
 }
 
 .galeria {
-    padding: 6rem 2rem;
+    padding: 6rem 5rem;
     color:#ccc;
+    background-color: #272727;
 }
 
 .grid-galeria {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    column-count: 4;          
+    column-gap: 1.5rem;
 }
 
 .grid-galeria img {
     width: 100%;
-    transition: transform 0.3s;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+    height: auto;             
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
 .grid-galeria img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .grid-galeria img:focus {
     transform: scale(1.05);
+}
+
+@media (max-width: 1200px) {
+    .grid-galeria {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-galeria {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-galeria {
+        column-count: 1;
+    }
 }
 
 .datos {
@@ -271,7 +295,7 @@ td, th {
 footer {
     padding: 2rem;
     text-align: center;
-    background: #111;
+    background:#212121;
     color: white;
 }
 
@@ -449,6 +473,7 @@ button:hover {
 
 .media-fisica {
     padding: 6rem 2rem;
+    padding-top: 2%;
     background: #0a0a0a;
     text-align: center;
 }
@@ -466,7 +491,6 @@ button:hover {
 }
 
 .media-carousel {
-    overflow: hidden;
     width: 100%;
     margin-bottom: 4rem;
 }
