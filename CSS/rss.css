@@ -12,16 +12,18 @@
 
 .rss-header {
     position: relative;
-    height: auto;
-    padding: 4rem 2rem;
+    min-height: auto !important;
+    height: auto !important;
+    /*!important para dar máxima prioridad a la propiedad*/
+    padding: 2rem;
     color:#ececec;
-    background: #000;
+    background: #161616;
     text-align: center;
+    z-index: 10;
 }
 
-.rss-header {
-    position: relative;
-    z-index: 10;
+.rss-header h1 {
+    margin-bottom: 0;
 }
 
 .btn-volver {
@@ -30,7 +32,8 @@
 }
 
 .rss-section {
-    padding: 6rem 2rem;
+    padding: 2rem 2rem;
+    padding-top: 2rem;
     background: linear-gradient(180deg, #000 0%, #0d0d0d 100%);
     text-align: center;
 }
@@ -91,7 +94,7 @@
 
 .btn-volver {
     display: inline-block;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     padding: 0.7rem 1.4rem;
     background: #4f46e5;
     color: white;
