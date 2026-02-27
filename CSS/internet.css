@@ -5,6 +5,9 @@
 }
 
 body {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #111;
@@ -56,6 +59,7 @@ header::before {
     z-index: 100;
     background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(6px);
+    position: fixed;
 }
 
 .contenido-header {
@@ -282,11 +286,17 @@ main {
     color: #ccc;
 }
 
+.tabla-contenedor{
+    width: 100%;
+    overflow-x: auto; /*scroll horizontal y así en el responsive no se rompe la tabla*/
+    margin-top: 2rem;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 2rem;
-    min-width: 600px;
+    min-width: 500px;
 }
 
 td, th {
@@ -295,8 +305,12 @@ td, th {
     text-align: center;
 }
 
+
 footer {
     padding: 2rem;
+    width: 100%;
+    position: relative;
+    z-index: 10;
     text-align: center;
     background:#212121;
     color: white;
@@ -306,6 +320,11 @@ footer a {
     color: white;
     margin: 0 0.5rem;
     font-size: 1.5rem;
+}
+
+main{
+    display: block;
+    overflow: hidden;
 }
 
 @media (max-width: 900px) {
@@ -319,9 +338,6 @@ footer a {
 }
 
 @media (max-width: 600px) {
-    .menu {
-        display: none;
-    }
 
     .grid-galeria {
         grid-template-columns: 1fr;
@@ -666,7 +682,6 @@ button:hover {
         margin: 1rem;
     }
 
-    @media (max-width: 600px) {
     .datos-preguntas {
         width: 90%;          
         margin: 2rem auto; 
@@ -686,7 +701,6 @@ button:hover {
     .opcion {
         flex-direction: row;
     }
-}
 
     input,
     textarea,
@@ -694,8 +708,9 @@ button:hover {
         font-size: 1rem;
     }
 }
+
 #menu-toggle {
-    display: none;
+    display: none !important;
 }
 
 .menu-icon {
@@ -704,8 +719,6 @@ button:hover {
     cursor: pointer;
     color: #111;
 }
-
-/* ===== Menú ===== */
 
 @media (max-width: 600px) {
 
@@ -731,16 +744,17 @@ button:hover {
         width: 220px;
     }
 
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+    }
+}   
+
     .menu a {
         font-size: 0.95rem;
         color: #dcdcdc;
         display: flex;
         align-items: center;
         gap: 0.6rem;
-    }
-
-    #menu-toggle:checked + .menu-icon + .menu {
-        display: flex;
     }
 
     footer {
@@ -760,7 +774,6 @@ button:hover {
         gap: 12px;
     }
 
-}
 
 /* ===== Animación retro walker ===== */
 

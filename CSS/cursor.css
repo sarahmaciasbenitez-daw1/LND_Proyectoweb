@@ -6,3 +6,11 @@
     z-index: 9999;
     transform: translate(-50%, -50%);
 }
+
+.cursor-hidden {
+    display: none !important;
+}
+
+.icon-disabled {
+    color:rgb(50, 29, 184) !important;
+}
